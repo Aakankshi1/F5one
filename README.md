@@ -1,4 +1,4 @@
-# F5ONE Studio — One Page Website
+# F5.One Studio — One Page Website
 
 A lightweight, responsive website intended for GitHub Pages.
 
@@ -55,7 +55,7 @@ This is ideal for the first version because you can manually approve every shoot
 
 ## Custom domain later
 
-Once you buy the domain, for example `f5one.com` or `f5one.studio`, add it under:
+Once you buy the domain, for example `F5.One.com` or `F5.One.studio`, add it under:
 
 GitHub Repository → Settings → Pages → Custom Domain
 
