@@ -7,6 +7,7 @@ A lightweight, responsive website intended for GitHub Pages.
 - `index.html` — website structure
 - `style.css` — styling
 - `script.js` — booking form / WhatsApp logic
+- `CNAME` — GitHub Pages custom domain (`f5one.in`)
 - `assets/` — add your property photographs here
 
 ## Image filenames
@@ -49,13 +50,20 @@ This is ideal for the first version because you can manually approve every shoot
 3. Open repository **Settings**.
 4. Go to **Pages**.
 5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select `main` and `/root`.
+6. Select `main` and `/ (root)`.
 7. Save.
 8. GitHub will provide the live website URL.
 
-## Custom domain later
+## Custom domain
 
-Once you buy the domain, for example `F5.One.com` or `F5.One.studio`, add it under:
+The brand can be written as `F5.One`, but the website domain must stay `f5one.in`.
+Keep the root `CNAME` file exactly as:
+
+```text
+f5one.in
+```
+
+In GitHub, add the same domain under:
 
 GitHub Repository → Settings → Pages → Custom Domain
 
