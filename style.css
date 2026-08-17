@@ -3,10 +3,10 @@
 }
 
 :root {
-  --bg: #d8d2c6;
+  --bg: #cfc4ad;
   --ink: #24231f;
   --charcoal: #2b2925;
-  --muted: #676257;
+  --muted: #6c6252;
   --line: rgba(36, 35, 31, 0.18);
   --white: #fff;
 }
@@ -19,10 +19,12 @@ body {
   margin: 0;
   background-color: var(--bg);
   background-image:
-    linear-gradient(110deg, rgba(43, 41, 37, 0.08), rgba(43, 41, 37, 0) 38%),
-    linear-gradient(72deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0) 44%),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.09) 0 1px, transparent 1px 7px),
-    repeating-linear-gradient(90deg, rgba(36, 35, 31, 0.035) 0 1px, transparent 1px 9px);
+    radial-gradient(ellipse at 18% 12%, rgba(255, 255, 255, 0.28), transparent 34%),
+    radial-gradient(ellipse at 78% 22%, rgba(88, 76, 56, 0.18), transparent 30%),
+    radial-gradient(ellipse at 42% 68%, rgba(255, 255, 255, 0.18), transparent 38%),
+    radial-gradient(ellipse at 86% 84%, rgba(43, 41, 37, 0.12), transparent 32%),
+    linear-gradient(110deg, rgba(43, 41, 37, 0.08), rgba(43, 41, 37, 0) 42%),
+    repeating-linear-gradient(7deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 8px);
   color: var(--ink);
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
@@ -275,28 +277,29 @@ img {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 178px;
-  gap: 22px;
+  grid-auto-rows: 150px;
+  gap: 24px;
 }
 
 .tile {
   grid-column: span 3;
+  grid-row: span 1;
   position: relative;
   overflow: hidden;
   margin: 0;
-  background: #c9c2b6;
+  background: #bfb39c;
   border: 1px solid rgba(43, 41, 37, 0.12);
-  border-radius: 42% 58% 46% 54% / 36% 48% 52% 64%;
-  box-shadow: 0 20px 48px rgba(43, 41, 37, 0.16);
+  border-radius: 34% 66% 40% 60% / 44% 36% 64% 56%;
+  box-shadow: 0 18px 44px rgba(43, 41, 37, 0.15);
 }
 
 .tile-large {
-  grid-column: span 6;
-  grid-row: span 2;
+  grid-column: span 7;
+  grid-row: span 3;
 }
 
 .tile-wide {
-  grid-column: span 6;
+  grid-column: span 3;
 }
 
 .tile:nth-child(2) {
@@ -305,17 +308,17 @@ img {
 }
 
 .tile:nth-child(3) {
-  grid-column: span 3;
-  grid-row: span 2;
+  grid-column: span 2;
+  grid-row: span 1;
 }
 
 .tile:nth-child(4) {
-  grid-column: span 5;
-  grid-row: span 2;
+  grid-column: span 3;
+  grid-row: span 1;
 }
 
 .tile:nth-child(5) {
-  grid-column: span 4;
+  grid-column: span 2;
   grid-row: span 1;
 }
 
@@ -325,27 +328,27 @@ img {
 }
 
 .tile:nth-child(1) {
-  border-radius: 36% 64% 42% 58% / 46% 34% 66% 54%;
+  border-radius: 28% 72% 35% 65% / 42% 30% 70% 58%;
 }
 
 .tile:nth-child(2) {
-  border-radius: 58% 42% 62% 38% / 34% 58% 42% 66%;
+  border-radius: 52% 48% 62% 38% / 34% 64% 36% 66%;
 }
 
 .tile:nth-child(3) {
-  border-radius: 46% 54% 34% 66% / 62% 38% 58% 42%;
+  border-radius: 64% 36% 46% 54% / 48% 58% 42% 52%;
 }
 
 .tile:nth-child(4) {
-  border-radius: 64% 36% 52% 48% / 42% 68% 32% 58%;
+  border-radius: 38% 62% 56% 44% / 62% 36% 64% 38%;
 }
 
 .tile:nth-child(5) {
-  border-radius: 40% 60% 68% 32% / 56% 40% 60% 44%;
+  border-radius: 58% 42% 36% 64% / 36% 56% 44% 64%;
 }
 
 .tile:nth-child(6) {
-  border-radius: 62% 38% 44% 56% / 38% 64% 36% 62%;
+  border-radius: 42% 58% 66% 34% / 58% 42% 60% 40%;
 }
 
 .tile img {
@@ -631,6 +634,10 @@ textarea:focus {
   .gallery-grid .tile-wide {
     grid-column: span 1;
     grid-row: span 1;
+  }
+
+  .gallery-grid .tile:nth-child(1) {
+    grid-row: span 2;
   }
 
   .section-heading {
